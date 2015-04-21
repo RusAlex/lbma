@@ -2,7 +2,7 @@ Just LBMA getter recent Londong Gold and Silver fixes.
 
 
 API:
-
+```javascript
 var lbma = require('lbma');
 
 lbma.getGold(function(result) {
@@ -17,3 +17,4 @@ lbma.getSilver(function(result) {
   // result.date
   // result.value
 });
+```
