@@ -1,0 +1,16 @@
+{
+  "name": "lbma",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.55.0",
+    "cheerio": "~0.19.0",
+    "xml2json": "~0.6.1"
+  }
+}
