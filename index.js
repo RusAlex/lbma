@@ -1,6 +1,5 @@
 var request = require('request');
 var $ = require('cheerio');
-var parser = require('xml2json');
 
 var Parser = {
 
