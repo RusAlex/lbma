@@ -4,7 +4,8 @@ var $ = require('cheerio');
 var Parser = {
 
   getGold: function(success) {
-    request('http://lbma.oblive.co.uk/table', function(err, res, body) {
+    var r = this._getRequest();
+    r('http://lbma.oblive.co.uk/table', function(err, res, body) {
       if (err) {
         console.log(err);
         return;
@@ -20,6 +21,7 @@ var Parser = {
       result.date = $('td', html)[0].children[0].data;
       result.usd = {
         am:  $('td', html)[1].children[0].data,
+        //pm:  $('td', html)[2].children[0].data
         pm:  $('td', html)[2].children[0] ? $('td', html)[2].children[0].data : null
       };
       success(result);
@@ -27,6 +29,10 @@ var Parser = {
   },
 
   getSilver: function(success) {
+  },
+
+  _getRequest: function() {
+    return request;
   }
 
 };
