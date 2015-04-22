@@ -20,7 +20,7 @@ var Parser = {
       result.date = $('td', html)[0].children[0].data;
       result.usd = {
         am:  $('td', html)[1].children[0].data,
-        pm:  $('td', html)[2].children[0].data
+        pm:  $('td', html)[2].children[0] ? $('td', html)[2].children[0].data : null
       };
       success(result);
     });
